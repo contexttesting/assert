@@ -1,21 +1,26 @@
-import { equal, ok } from 'zoroaster/assert'
 import Context from '../context'
-import assert from '../../src'
+import { throws, deepEqual } from '../..'
 
 /** @type {Object.<string, (c: Context)>} */
 const T = {
   context: Context,
-  'is a function'() {
-    equal(typeof assert, 'function')
+  'deep equal'() {
+    try {
+      deepEqual('test', 'not-test')
+    } catch (err) {
+      return err.message
+    }
   },
-  async 'calls package without error'() {
-    await assert()
-  },
-  async 'gets a link to the fixture'({ FIXTURE }) {
-    const res = await assert({
-      text: FIXTURE,
-    })
-    ok(res, FIXTURE)
+  async 'throws'() {
+    const error = new Error()
+    try {
+      await throws({
+        fn() { throw error },
+        error: new Error(),
+      })
+    } catch (err) {
+      return err.message
+    }
   },
 }
 

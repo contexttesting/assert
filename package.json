@@ -2,8 +2,7 @@
   "name": "@zoroaster/assert",
   "version": "0.0.0-pre",
   "description": "The Assertion Library For Zoroaster Context Testing Framework Including Deep Equal & Assert Throws.",
-  "main": "build/index.js",
-  "module": "src/index.js",
+  "main": "depack/index.js",
   "scripts": {
     "t": "zoroaster -a",
     "test": "yarn t test/spec test/mask",
@@ -11,27 +10,31 @@
     "mask": "yarn t test/mask",
     "test-build": "ALAMODE_ENV=test-build yarn test",
     "lint": "eslint .",
+    "depack": "GOOGLE_CLOSURE_COMPILER=/Volumes/backup/closure-compiler/target/closure-compiler-1.0-SNAPSHOT.jar depack src/depack.js -l -a -p -o depack -s -O 2017",
     "doc": "NODE_DEBUG=doc doc -o README.md",
     "b": "alamode src -o build -s",
-    "d": "yarn-s d1 externs",
-    "d1": "typal src -c",
-    "externs": "typal externs.js -e",
+    "d": "yarn-s d1",
+    "d1": "typal depack/index.js -c",
     "build": "yarn-s d b doc",
     "e": "alanode"
   },
   "files": [
-    "build",
-    "src",
-    "externs.js"
+    "depack"
   ],
-  "externs": "externs.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/contexttesting/assert.git"
   },
   "keywords": [
     "assert",
-    "zoroaster"
+    "zoroaster",
+    "context",
+    "testing",
+    "deep equal",
+    "color",
+    "throw",
+    "throws",
+    "catch"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
@@ -40,8 +43,10 @@
   },
   "homepage": "https://github.com/contexttesting/assert#readme",
   "devDependencies": {
-    "alamode": "^2.0.0",
-    "documentary": "^1.26.2",
+    "@zoroaster/deep-equal": "^1.0.1",
+    "alamode": "^2.1.0",
+    "assert-throws": "^3.3.0",
+    "documentary": "^1.26.5",
     "eslint-config-artdeco": "1.0.1",
     "yarn-s": "1.1.0",
     "zoroaster": "^3.13.0"

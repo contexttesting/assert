@@ -1,6 +1,6 @@
 import makeTestSuite from '@zoroaster/mask'
 import Context from '../context'
-import assert from '../../src'
+import assert from '../../depack'
 
 // export default
 makeTestSuite('test/result', {

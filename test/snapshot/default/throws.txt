@@ -1,0 +1,1 @@
+Error is not strict equal to Error.
