@@ -1,6 +1,6 @@
 {
   "name": "@zoroaster/assert",
-  "version": "0.0.0-pre",
+  "version": "1.0.0",
   "description": "The Assertion Library For Zoroaster Context Testing Framework Including Deep Equal & Assert Throws.",
   "main": "depack/index.js",
   "scripts": {
