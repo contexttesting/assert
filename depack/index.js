@@ -1,5 +1,6 @@
 const { deepEqual: _deepEqual, throws: _throws } = require('./depack')
-const { assert, equal, ok } = require('assert')
+const assert = require('assert')
+const { equal, ok } = assert
 
 /**
  * The Deep Equal Assertion With Color.
