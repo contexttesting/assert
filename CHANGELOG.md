@@ -1,3 +1,9 @@
+## 3 May 2019
+
+### [1.0.2](https://github.com/contexttesting/assert/compare/v1.0.1...v1.0.2)
+
+- [package] Remove source maps.
+
 ## 2 May 2019
 
 ### [1.0.1](https://github.com/contexttesting/assert/compare/v1.0.0...v1.0.1)

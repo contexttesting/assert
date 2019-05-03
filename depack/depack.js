@@ -1,7 +1,7 @@
-             
+
 let DEPACK_EXPORT;
 const assert = require('assert');
-const os = require('os');             
+const os = require('os');
 const {deepStrictEqual:r} = assert;
 /*
  diff package https://github.com/kpdecker/jsdiff
@@ -302,4 +302,3 @@ DEPACK_EXPORT = {deepEqual:function(a, b, f) {
 
 
 module.exports = DEPACK_EXPORT
-//# sourceMappingURL=depack.js.map
